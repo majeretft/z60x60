@@ -1,3 +1,54 @@
-﻿header .logo {
-  background: url(http://placehold.it/250x250);
+﻿body {
+  background-repeat: repeat;
+  background-image: url("../img/bg_r1_67_ovr.jpg");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  body {
+    background-image: url("../img/bg_r1_134_ovr.jpg");
+    background-size: 67px 67px;
+  }
+}
+header,
+footer {
+  padding: 10px 5px;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+}
+header .link,
+footer .link {
+  color: #e0e0e0;
+}
+header .link:hover,
+footer .link:hover {
+  color: #c7c7c7;
+}
+header {
+  background-image: linear-gradient(to top, #333, #0d0d0d);
+}
+header .header-text {
+  font-size: 1.25em;
+  font-style: italic;
+}
+header .menu {
+  margin-top: 5px;
+}
+header .menu a {
+  margin-right: 5px;
+}
+header .contacts {
+  font-size: 1.3em;
+}
+header .contacts .call-to-action {
+  font-style: italic;
+  color: #e06363;
+}
+footer {
+  background-image: linear-gradient(to bottom, #333, #0d0d0d);
+}
+footer .contacts {
+  font-size: 1.3em;
+}
+footer .contacts .call-to-action {
+  font-style: italic;
+  color: #e06363;
 }

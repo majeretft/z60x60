@@ -1,8 +1,74 @@
-﻿body {
+@text-color: #e0e0e0;
+
+body {
+	background-repeat: repeat;
+	.img-retina('../img/bg_r1_67_ovr.jpg', '../img/bg_r1_134_ovr.jpg', 67px, 67px);
+}
+
+header, 
+footer {
+	padding: 10px 5px;
+	background-color: hsl(0, 0%, 5%);
+
+	color: @text-color;
+	
+	.link {
+		color: @text-color;
+
+		&:hover {
+			color: darken(@text-color, 10%);
+		}
+	}
 }
 
 header {
-	.logo {
-		background: url(http://placehold.it/250x250);
+	background-image: linear-gradient(to top, #333, #0d0d0d);
+
+	.header-text {
+		font-size: 1.25em;
+		font-style: italic;
+	}
+
+	.menu {
+		margin-top: 5px;
+
+		a {
+			margin-right: 5px;
+		}
+	}
+
+	.contacts {
+		font-size: 1.3em;
+
+		.call-to-action {
+			font-style: italic;
+			color: multiply(@text-color, #ff7171);
+		}
+	}
+}
+
+main {
+
+}
+
+footer {
+	background-image: linear-gradient(to bottom, #333, #0d0d0d);
+
+	.contacts {
+		font-size: 1.3em;
+
+		.call-to-action {
+			font-style: italic;
+			color: multiply(@text-color, #ff7171);
+		}
+	}
+}
+
+.img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {
+	background-image: url("@{file-1x}");
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+		background-image: url("@{file-2x}");
+		background-size: @width-1x @height-1x;
 	}
 }
