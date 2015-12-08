@@ -5,13 +5,12 @@ body {
 	.img-retina('../img/bg_r1_67_ovr.jpg', '../img/bg_r1_134_ovr.jpg', 67px, 67px);
 }
 
-header, 
+header,
 footer {
 	padding: 10px 5px;
 	background-color: hsl(0, 0%, 5%);
-
 	color: @text-color;
-	
+
 	.link {
 		color: @text-color;
 
@@ -23,6 +22,7 @@ footer {
 
 header {
 	background-image: linear-gradient(to top, #333, #0d0d0d);
+	margin-bottom: 15px;
 
 	.header-text {
 		font-size: 1.25em;
@@ -47,8 +47,16 @@ header {
 	}
 }
 
+
+
 main {
 
+	.product{
+		img{
+			margin-bottom: 10px;
+			border-radius: 10px;
+		}
+	}
 }
 
 footer {
@@ -62,6 +70,25 @@ footer {
 			color: multiply(@text-color, #ff7171);
 		}
 	}
+}
+
+.img-rounded-10 {
+	border-radius: 10px;
+}
+
+.margin-bottom-10 {
+	margin-bottom: 10px;
+}
+
+.well {
+	background-image: url(../img/semiTransparentWhite.png);
+	background-color: transparent;
+	background-repeat: repeat;
+	border-radius: 10px;
+}
+
+.red-line {
+	text-indent: 2em;
 }
 
 .img-retina(@file-1x; @file-2x; @width-1x; @height-1x) {

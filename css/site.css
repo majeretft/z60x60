@@ -24,6 +24,7 @@ footer .link:hover {
 }
 header {
   background-image: linear-gradient(to top, #333, #0d0d0d);
+  margin-bottom: 15px;
 }
 header .header-text {
   font-size: 1.25em;
@@ -42,6 +43,10 @@ header .contacts .call-to-action {
   font-style: italic;
   color: #e06363;
 }
+main .product img {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
 footer {
   background-image: linear-gradient(to bottom, #333, #0d0d0d);
 }
@@ -51,4 +56,19 @@ footer .contacts {
 footer .contacts .call-to-action {
   font-style: italic;
   color: #e06363;
+}
+.img-rounded-10 {
+  border-radius: 10px;
+}
+.margin-bottom-10 {
+  margin-bottom: 10px;
+}
+.well {
+  background-image: url(../img/semiTransparentWhite.png);
+  background-color: transparent;
+  background-repeat: repeat;
+  border-radius: 10px;
+}
+.red-line {
+  text-indent: 2em;
 }
