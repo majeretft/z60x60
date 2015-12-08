@@ -1,4 +1,8 @@
-﻿body {
+﻿@font-face {
+  font-family: calligraphmedium;
+  src: url('../fonts/calligraphmedium.ttf') format('truetype'), url('../fonts/calligraphmedium.woff');
+}
+body {
   background-repeat: repeat;
   background-image: url("../img/bg_r1_67_ovr.jpg");
 }
@@ -24,11 +28,10 @@ footer .link:hover {
 }
 header {
   background-image: linear-gradient(to top, #333, #0d0d0d);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 header .header-text {
   font-size: 1.25em;
-  font-style: italic;
 }
 header .menu {
   margin-top: 5px;
@@ -38,10 +41,6 @@ header .menu a {
 }
 header .contacts {
   font-size: 1.3em;
-}
-header .contacts .call-to-action {
-  font-style: italic;
-  color: #e06363;
 }
 main .product img {
   margin-bottom: 10px;
@@ -53,15 +52,11 @@ footer {
 footer .contacts {
   font-size: 1.3em;
 }
-footer .contacts .call-to-action {
-  font-style: italic;
-  color: #e06363;
-}
 .img-rounded-10 {
   border-radius: 10px;
 }
-.margin-bottom-10 {
-  margin-bottom: 10px;
+.banner {
+  margin-bottom: 20px;
 }
 .well {
   background-image: url(../img/semiTransparentWhite.png);
@@ -71,4 +66,17 @@ footer .contacts .call-to-action {
 }
 .red-line {
   text-indent: 2em;
+}
+.font-calligraph {
+  font-family: Calligraph;
+}
+.call-to-action {
+  color: #e06363;
+}
+@font-face {
+  font-family: 'Calligraph';
+  src: url('../fonts/calligraphmedium.ttf');
+  src: url('../fonts/calligraphmedium.woff') format('woff'), url('../fonts/calligraphmedium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
