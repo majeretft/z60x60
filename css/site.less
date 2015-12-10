@@ -58,6 +58,16 @@ main {
 		}
 	}
 
+	.product-details {
+		& > .row {
+			margin-bottom: 15px;
+
+			img {
+				border-radius: 10px;
+			}
+		}
+	}
+
 	.nav-list {
 		list-style: none;
 		padding: 0;
@@ -105,6 +115,10 @@ footer {
 	.margin-bottom(20px);
 }
 
+.red-line {
+	text-indent: 2em;
+}
+
 .well {
 	background-image: url(../img/transparentWhite75.png);
 	background-color: transparent;
@@ -113,8 +127,16 @@ footer {
 	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
-.red-line {
-	text-indent: 2em;
+.carousel {
+	.carousel-control.left {
+		overflow: hidden;
+		border-radius: 10px;
+	}
+
+	.carousel-control.right {
+		overflow: hidden;
+		border-radius: 10px;
+	}
 }
 
 .font-calligraph {

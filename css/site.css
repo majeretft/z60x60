@@ -43,6 +43,12 @@ main .product img {
   margin-bottom: 10px;
   border-radius: 10px;
 }
+main .product-details > .row {
+  margin-bottom: 15px;
+}
+main .product-details > .row img {
+  border-radius: 10px;
+}
 main .nav-list {
   list-style: none;
   padding: 0;
@@ -79,6 +85,9 @@ footer .contacts {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.red-line {
+  text-indent: 2em;
+}
 .well {
   background-image: url(../img/transparentWhite75.png);
   background-color: transparent;
@@ -86,8 +95,13 @@ footer .contacts {
   border-radius: 10px;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
-.red-line {
-  text-indent: 2em;
+.carousel .carousel-control.left {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.carousel .carousel-control.right {
+  overflow: hidden;
+  border-radius: 10px;
 }
 .font-calligraph {
   font-family: Calligraph;
