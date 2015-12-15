@@ -176,9 +176,12 @@
 											<div class="row">
 												<div class="col-lg-12">
 													<div class="product-3d">
-														<!--<img style="margin: 0 auto; display: block;" src="http://placehold.it/700x300?text=3D" />-->
-														<!-- TOFO: Remove this test iframe -->
-														<iframe src="_temp/x/index.html" style="display: block; width: 826px; height: 350px;" frameborder="0"></iframe>
+														<!-- TODO: Remove this test iframe -->
+														<iframe id="frame" src="_temp/x/index.html" frameborder="0"></iframe>
+														<div class="product-handle text-center">
+															<span id="play" class="fa fa-play"></span>
+															<span id="pause" class="fa fa-pause"></span>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -228,6 +231,22 @@
 		skrollr.init({
 			smoothScrolling: true,
 			forceHeight: false
+		});
+
+		$(function () {
+			var frame = $('#frame')[0];
+
+			$('#play').on('click', function () {
+				if (!frame.viewCfg)
+					return;
+				frame.viewCfg.autorotate = true;
+			});
+
+			$('#pause').on('click', function () {
+				if (!frame.viewCfg)
+					return;
+				frame.viewCfg.autorotate = false;
+			});
 		});
 	</script>
 </body>

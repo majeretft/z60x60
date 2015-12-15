@@ -43,6 +43,18 @@ main .product img {
   margin-bottom: 10px;
   border-radius: 10px;
 }
+main .product-details .product-3d iframe {
+  display: block;
+  min-width: 100%;
+  height: 25em;
+}
+main .product-details .product-3d .product-handle {
+  letter-spacing: 0.5em;
+  font-size: 1.3em;
+}
+main .product-details .product-3d .product-handle span {
+  cursor: pointer;
+}
 main .product-details > .row {
   margin-bottom: 15px;
 }

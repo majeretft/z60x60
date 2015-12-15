@@ -1,29 +1,5 @@
 [
   {
-    "outputFileName": "js/detector-r73.js",
-    "inputFiles": [
-      "js/detector-r73.js"
-    ]
-  },
-  {
-    "outputFileName": "js/mtlLoader-r73.js",
-    "inputFiles": [
-      "js/mtlLoader-r73.js"
-    ]
-  },
-  {
-    "outputFileName": "js/objLoader-r73.js",
-    "inputFiles": [
-      "js/objLoader-r73.js"
-    ]
-  },
-  {
-    "outputFileName": "js/objMtlLoader-r73.js",
-    "inputFiles": [
-      "js/objMtlLoader-r73.js"
-    ]
-  },
-  {
     "outputFileName": "js/fw.js",
     "inputFiles": [
       "js/jquery-1.11.3.js",
