@@ -1,0 +1,49 @@
+[
+  {
+    "outputFileName": "js/detector-r73.js",
+    "inputFiles": [
+      "js/detector-r73.js"
+    ]
+  },
+  {
+    "outputFileName": "js/mtlLoader-r73.js",
+    "inputFiles": [
+      "js/mtlLoader-r73.js"
+    ]
+  },
+  {
+    "outputFileName": "js/objLoader-r73.js",
+    "inputFiles": [
+      "js/objLoader-r73.js"
+    ]
+  },
+  {
+    "outputFileName": "js/objMtlLoader-r73.js",
+    "inputFiles": [
+      "js/objMtlLoader-r73.js"
+    ]
+  },
+  {
+    "outputFileName": "js/fw.js",
+    "inputFiles": [
+      "js/jquery-1.11.3.js",
+      "js/bootstrap.js",
+      "js/skrollr.min.js"
+    ]
+  },
+  {
+    "outputFileName": "css/fw.css",
+    "inputFiles": [
+      "css/bootstrap.css",
+      "css/bootstrap-theme.css",
+      "css/font-awesome.css"
+    ]
+  },
+  {
+    "outputFileName": "js/ie8.js",
+    "inputFiles": [
+      "js/modernizr-2.8.3.min.js",
+      "js/respond.min.js"
+    ]
+  }
+]

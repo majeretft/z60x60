@@ -229,6 +229,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-/compilerconfig.json
-/compilerconfig.json.defaults
 /_models
+/_temp
