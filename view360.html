@@ -5,11 +5,27 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		canvas {
+			display: block;
+			cursor: move;
+		}
+	</style>
 </head>
 <body>
 	<canvas id="scene"></canvas>
 
 	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/three.min.js"></script>
+	<script src="js/fw3d.min.js"></script>
+	<script src="js/app3d.min.js"></script>
 	<script>
 		var viewCfg = {
 			autorotate: true

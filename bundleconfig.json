@@ -21,5 +21,26 @@
       "js/modernizr-2.8.3.min.js",
       "js/respond.min.js"
     ]
+  },
+  {
+    "outputFileName": "js/jquery-1.11.3.js",
+    "inputFiles": [
+      "js/jquery-1.11.3.js"
+    ]
+  },
+  {
+    "outputFileName": "js/app3d.js",
+    "inputFiles": [
+      "js/app3d.js"
+    ]
+  },
+  {
+    "outputFileName": "js/fw3d.js",
+    "inputFiles": [
+      "js/objLoader-r73.js",
+      "js/mtlLoader-r73.js",
+      "js/objMtlLoader-r73.js",
+      "js/orbitControls-r73.js"
+    ]
   }
 ]

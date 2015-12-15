@@ -98,8 +98,8 @@
 								<div class="col-lg-3">
 									<ul class="nav-list">
 										<li>
-											<a href="vnutr.html" class="btn btn-default">
-												<img src="img/btn_inner_new_200x150_orange.png" alt="" />
+											<a href="domik-vnesh.html" class="btn btn-default">
+												<img src="img/btn_outer_pyramid_200x150_blue.png" alt="" />
 												<p>Подробнее</p>
 											</a>
 										</li>
@@ -110,13 +110,13 @@
 											</a>
 										</li>
 										<li>
-											<a href="domik-vnesh.html" class="btn btn-default">
-												<img src="img/btn_outer_pyramid_200x150_blue.png" alt="" />
+											<a href="vnutr.html" class="btn btn-default">
+												<img src="img/btn_inner_new_200x150_orange.png" alt="" />
 												<p>Подробнее</p>
 											</a>
 										</li>
 										<li>
-											<a href="vnutr.html" class="btn btn-default">
+											<a href="vnesh.html" class="btn btn-default">
 												<img src="img/btn_outer_simple_200x150_cyan.png" alt="" />
 												<p>Подробнее</p>
 											</a>
@@ -174,13 +174,11 @@
 												</div>
 											</div>
 											<div class="row">
-												<div class="col-lg-12">
-													<div class="product-3d">
-														<!-- TODO: Remove this test iframe -->
-														<iframe id="frame" src="_temp/x/index.html" frameborder="0"></iframe>
+												<div class="col-lg-offset-2 col-lg-8">
+													<div class="product-3d hidden">
+														<iframe id="frame3d" srcTarget="view360.html?obj=60x60_outer_pyramid" frameborder="0"></iframe>
 														<div class="product-handle text-center">
-															<span id="play" class="fa fa-play"></span>
-															<span id="pause" class="fa fa-pause"></span>
+															<span id="toggle" class="fa fa-play-circle"></span>
 														</div>
 													</div>
 												</div>
@@ -234,18 +232,33 @@
 		});
 
 		$(function () {
-			var frame = $('#frame')[0];
+			var getGLState = function () {
+				try {
+					var canvas = document.createElement('canvas');
+					return !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+				} catch (e) {
+					return false;
+				}
+			};
 
-			$('#play').on('click', function () {
-				if (!frame.viewCfg)
-					return;
-				frame.viewCfg.autorotate = true;
-			});
+			if (!getGLState())
+				return;
 
-			$('#pause').on('click', function () {
-				if (!frame.viewCfg)
+			$('.product-3d').removeClass('hidden');
+
+			var frame = $('#frame3d')[0];
+			frame.src = $(frame).attr('srcTarget');
+
+			$('#toggle').on('click', function (e) {
+				if (!frame.contentWindow.viewCfg)
 					return;
-				frame.viewCfg.autorotate = false;
+				frame.contentWindow.viewCfg.autorotate = !frame.contentWindow.viewCfg.autorotate;
+
+				var remCls = frame.contentWindow.viewCfg.autorotate ? 'fa-play-circle' : 'fa-pause-circle';
+				var addCls = frame.contentWindow.viewCfg.autorotate ? 'fa-pause-circle' : 'fa-play-circle';
+
+				$(e.currentTarget).toggleClass(remCls);
+				$(e.currentTarget).toggleClass(addCls);
 			});
 		});
 	</script>
