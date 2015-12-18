@@ -3,7 +3,11 @@
 	src: url('../fonts/calligraphmedium.ttf') format('truetype'), url('../fonts/calligraphmedium.woff');
 }
 
-@text-color: #e0e0e0;
+@color-text-add: #E3E3E3;
+@color-text-luma: #FF9F00;
+
+@color-main: #FFF5E6;
+@color-add: #00204D;
 
 html {
 	overflow-x: hidden;
@@ -12,20 +16,20 @@ html {
 header,
 footer {
 	padding: 10px 5px;
-	background-color: hsl(0, 0%, 5%);
-	color: @text-color;
+	background-color: @color-add;
+	color: @color-text-add;
 
 	.link {
-		color: @text-color;
+		color: @color-text-add;
 
 		&:hover {
-			color: darken(@text-color, 10%);
+			color: darken(@color-text-add, 10%);
 		}
 	}
 }
 
 header {
-	background-image: linear-gradient(to top, #333, #0d0d0d);
+	//background-image: linear-gradient(to top, @main-color-dark-sat, @main-color-dark);
 
 	.header-text {
 		font-size: 1.25em;
@@ -47,8 +51,8 @@ header {
 
 
 main {
-	background: linear-gradient(to bottom, darken(@text-color, 10%), darken(@text-color, 40%) 100%);
-	background-color: darken(@text-color, 10%);
+	//background: linear-gradient(to bottom, @main-color-sat2, @main-color-sat1 100%);
+	background-color: @color-main;
 	overflow-x: hidden;
 
 	.product {
@@ -64,19 +68,17 @@ main {
 				display: block;
 				min-width: 100%;
 				height: 25em;
-				border: 1px solid darken(@text-color, 20%);
+				border: 1px solid darken(@color-text-add, 20%);
 				border-radius: 10px;
 			}
 
 			.product-handle {
-				letter-spacing: 0.5em;
-				font-size: 3em;
-
 				span {
+					font-size: 3em;
 					cursor: pointer;
 
 					&:hover {
-						color: multiply(@text-color, #ff7171);
+						color: @color-text-luma;
 					}
 				}
 			}
@@ -111,7 +113,7 @@ main {
 }
 
 footer {
-	background-image: linear-gradient(to bottom, #333, #0d0d0d);
+	//background-image: linear-gradient(to bottom, #333, #0d0d0d);
 
 	.contacts {
 		font-size: 1.3em;
@@ -122,15 +124,15 @@ footer {
 #bg2,
 #bg3 {
 	background-attachment: fixed;
-	background-image: url(../img/bg_caps_three_green_500x.png);
+	background-image: url(../img/bg_caps_three_3_500x.png);
 }
 
 #bg2 {
-	background-image: url(../img/bg_caps_three_blue_500x.png);
+	background-image: url(../img/bg_caps_three_2_500x.png);
 }
 
 #bg3 {
-	background-image: url(../img/bg_caps_three_orange_500x.png);
+	background-image: url(../img/bg_caps_three_1_500x.png);
 }
 
 .banner {
@@ -143,7 +145,7 @@ footer {
 }
 
 .well {
-	background-image: url(../img/transparentWhite75.png);
+	background-image: url(../img/transparent.png);
 	background-color: transparent;
 	background-repeat: repeat;
 	border-radius: 10px;
@@ -167,7 +169,7 @@ footer {
 }
 
 .call-to-action {
-	color: multiply(@text-color, #ff7171);
+	color: @color-text-luma;
 }
 
 .carousel.vertical .carousel-inner {
