@@ -178,6 +178,7 @@
 													<iframe id="frame3d" srcTarget="view360.html?obj=60x60_outer_cap" frameborder="0"></iframe>
 													<div class="product-handle text-center">
 														<span id="toggle" class="fa fa-play-circle"></span>
+														<span id="eyedropper" class="fa fa-eyedropper"></span>
 													</div>
 												</div>
 											</div>
@@ -258,6 +259,13 @@
 				$(e.currentTarget).toggleClass(remCls);
 				$(e.currentTarget).toggleClass(addCls);
 			});
+
+			$('#eyedropper').colorpicker({ format: 'hex', color: 'red' }).on('changeColor.colorpicker', function (event) {
+				if (!frame.contentWindow.viewCfg)
+					return;
+
+				frame.contentWindow.viewCfg.matColor = event.color.toHex();
+			});;
 		});
 	</script>
 </body>

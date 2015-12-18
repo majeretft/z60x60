@@ -4,7 +4,7 @@
 mtllib 60x60_outer_pyramid.mtl
 
 #
-# object 60x60
+# object 60x60_outer_pyramid
 #
 
 v  -16.8981 25.7314 17.5061
@@ -7599,7 +7599,7 @@ vt 0.3523 0.9608 0.0000
 vt 0.3530 0.5065 0.0000
 # 4746 texture coords
 
-g 60x60
+g 60x60_outer_pyramid
 usemtl cap_60x60_outer_pyramid
 s off
 f 1/1 2/2 3/3 

@@ -75,6 +75,7 @@ App.prototype = {
 			mdl.position.y = -10;
 
 			me.scene.add(mdl);
+			me.obj3d = mdl;
 		});
 	},
 
@@ -85,6 +86,20 @@ App.prototype = {
 
 		this.camera.fov = fov;
 		this.camera.updateProjectionMatrix();
+	},
+
+	changeColor: function (newColor) {
+		if (!this.obj3d || this.oldColor == newColor)
+			return;
+
+		var obj = this.obj3d.children[2];
+
+		if (!obj || !obj.material)
+			return;
+
+		var colorStr = newColor.substring(1);
+		obj.material.color = new THREE.Color(parseInt(colorStr, 16));
+		this.oldColor = newColor;
 	}
 };
 
@@ -104,6 +119,10 @@ $(function () {
 			for (var i = 0; i < app.orbits.length; i++) {
 				app.orbits[i].update();
 			}
+		}
+
+		if (viewCfg.matColor) {
+			app.changeColor(viewCfg.matColor);
 		}
 
 		app.renderer.render(app.scene, app.camera);

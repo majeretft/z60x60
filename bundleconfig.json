@@ -3,6 +3,7 @@
     "outputFileName": "js/fw.js",
     "inputFiles": [
       "js/jquery-1.11.3.js",
+      "js/bootstrap-colorpicker.js",
       "js/bootstrap.js",
       "js/skrollr.min.js"
     ]
@@ -12,7 +13,8 @@
     "inputFiles": [
       "css/bootstrap.css",
       "css/bootstrap-theme.css",
-      "css/font-awesome.css"
+      "css/font-awesome.css",
+      "css/bootstrap-colorpicker.css"
     ]
   },
   {

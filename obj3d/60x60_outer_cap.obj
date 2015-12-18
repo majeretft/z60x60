@@ -4,7 +4,7 @@
 mtllib 60x60_outer_cap.mtl
 
 #
-# object ??????????18
+# object 60x60_outer_cap
 #
 
 v  31.4000 2.0000 27.4000
@@ -2637,7 +2637,7 @@ v  -31.2632 1.4013 27.9918
 v  -31.3134 1.5974 27.9995
 # 2628 vertices
 
-g ??????????18
+g 60x60_outer_cap
 usemtl cap_60x60_outer_simple
 s off
 f 1 2 3 
