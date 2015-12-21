@@ -4,6 +4,7 @@
 }
 html {
   overflow-x: hidden;
+  background-color: #00204D;
 }
 header,
 footer {
@@ -71,10 +72,12 @@ main .product img {
 }
 main .product-details .product-3d iframe {
   display: block;
-  min-width: 100%;
+  width: 80%;
   height: 25em;
   border: 1px solid #b0b0b0;
   border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
 }
 main .product-details .product-3d .product-handle {
   padding-top: 5px;
@@ -89,6 +92,22 @@ main .product-details .product-3d .product-handle span:hover {
 }
 main .product-details > .row {
   margin-bottom: 15px;
+}
+main .product-details > .row #photos {
+  max-width: 470px;
+}
+@media (max-width: 991px) {
+  main .product-details > .row #photos,
+  main .product-details > .row .product-scheme,
+  main .product-details > .row .product-onpipe,
+  main .product-details > .row .product-onfence {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  main .product-details > .row .product-scheme,
+  main .product-details > .row .product-onpipe {
+    margin-bottom: 15px;
+  }
 }
 main .product-details > .row img {
   border-radius: 10px;

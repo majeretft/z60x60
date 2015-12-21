@@ -11,6 +11,7 @@
 
 html {
 	overflow-x: hidden;
+	background-color: @color-add;
 }
 
 header,
@@ -30,7 +31,6 @@ footer {
 
 header {
 	//background-image: linear-gradient(to top, @main-color-dark-sat, @main-color-dark);
-
 	.header-text {
 		font-size: 1.25em;
 	}
@@ -102,13 +102,16 @@ main {
 	}
 
 	.product-details {
+
 		.product-3d {
 			iframe {
 				display: block;
-				min-width: 100%;
+				width: 80%;
 				height: 25em;
 				border: 1px solid darken(@color-text-add, 20%);
 				border-radius: 10px;
+				margin-right: auto;
+				margin-left: auto;
 			}
 
 			.product-handle {
@@ -128,6 +131,25 @@ main {
 
 		& > .row {
 			margin-bottom: 15px;
+			
+			#photos {
+				max-width: 470px;
+			}
+
+			@media (max-width: 991px) {
+				#photos,
+				.product-scheme,
+				.product-onpipe,
+				.product-onfence {
+					margin-right: auto;
+					margin-left: auto;
+				}
+
+				.product-scheme,
+				.product-onpipe {
+					margin-bottom: 15px;
+				}
+			}
 
 			img {
 				border-radius: 10px;
