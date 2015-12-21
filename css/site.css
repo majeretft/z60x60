@@ -55,9 +55,19 @@ main {
   background-color: #FFF5E6;
   overflow-x: hidden;
 }
+main .well:first-child {
+  margin-top: 20px;
+}
 main .product img {
   margin-bottom: 10px;
   border-radius: 10px;
+}
+@media (max-width: 767px) {
+  main .product .carousel {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 main .product-details .product-3d iframe {
   display: block;
@@ -87,6 +97,7 @@ main .nav-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 20px;
 }
 main .nav-list > li {
   margin-bottom: 10px;
@@ -114,7 +125,6 @@ footer .contacts {
 }
 .banner {
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 .red-line {
   text-indent: 2em;
