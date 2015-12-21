@@ -30,7 +30,6 @@ footer {
 
 header {
 	//background-image: linear-gradient(to top, @main-color-dark-sat, @main-color-dark);
-
 	.header-text {
 		font-size: 1.25em;
 	}
@@ -43,8 +42,33 @@ header {
 		}
 	}
 
+	nav.visible-xs-block {
+		a.btn {
+			margin-top: 10px;
+		}
+		.fa-bars {
+			font-size: 33px;
+		}
+		#menu-xs ul {
+			list-style: none;
+			font-size: 1.1em;
+			margin: 15px 0 0 0;
+			padding: 0;
+
+			li {
+				margin-bottom: 5px;
+			}
+		}
+	}
+
 	.contacts {
-		font-size: 1.3em;
+		font-size: 1.15em;
+	}
+
+	@media (min-width: 992px) {
+		.contacts {
+			font-size: 1.3em;
+		}
 	}
 }
 
@@ -86,7 +110,7 @@ main {
 				}
 			}
 		}
-		
+
 		& > .row {
 			margin-bottom: 15px;
 
@@ -117,7 +141,6 @@ main {
 
 footer {
 	//background-image: linear-gradient(to bottom, #333, #0d0d0d);
-
 	.contacts {
 		font-size: 1.3em;
 	}

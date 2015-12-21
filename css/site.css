@@ -28,8 +28,28 @@ header .menu {
 header .menu a {
   margin-right: 5px;
 }
+header nav.visible-xs-block a.btn {
+  margin-top: 10px;
+}
+header nav.visible-xs-block .fa-bars {
+  font-size: 33px;
+}
+header nav.visible-xs-block #menu-xs ul {
+  list-style: none;
+  font-size: 1.1em;
+  margin: 15px 0 0 0;
+  padding: 0;
+}
+header nav.visible-xs-block #menu-xs ul li {
+  margin-bottom: 5px;
+}
 header .contacts {
-  font-size: 1.3em;
+  font-size: 1.15em;
+}
+@media (min-width: 992px) {
+  header .contacts {
+    font-size: 1.3em;
+  }
 }
 main {
   background-color: #FFF5E6;
