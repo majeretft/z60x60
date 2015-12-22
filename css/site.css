@@ -95,15 +95,17 @@ main .product-details > .row {
 }
 main .product-details > .row #photos {
   max-width: 470px;
+  margin-right: auto;
+  margin-left: auto;
+}
+main .product-details > .row .product-scheme,
+main .product-details > .row .product-onpipe,
+main .product-details > .row .product-onfence {
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #b0b0b0;
 }
 @media (max-width: 991px) {
-  main .product-details > .row #photos,
-  main .product-details > .row .product-scheme,
-  main .product-details > .row .product-onpipe,
-  main .product-details > .row .product-onfence {
-    margin-right: auto;
-    margin-left: auto;
-  }
   main .product-details > .row .product-scheme,
   main .product-details > .row .product-onpipe {
     margin-bottom: 15px;
