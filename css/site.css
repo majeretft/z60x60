@@ -70,6 +70,12 @@ main .product img {
     margin-right: auto;
   }
 }
+main .product-details .carousel-indicators {
+  border-radius: 5px;
+  background-image: url(../img/transparent_black.png);
+  background-color: transparent;
+  background-repeat: repeat;
+}
 main .product-details .product-3d .embed-responsive-16by9 {
   width: 80%;
   margin-right: auto;
@@ -151,7 +157,7 @@ footer .contacts {
   text-indent: 2em;
 }
 .well {
-  background-image: url(../img/transparent.png);
+  background-image: url(../img/transparent_white.png);
   background-color: transparent;
   background-repeat: repeat;
   border-radius: 10px;
