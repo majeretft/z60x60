@@ -248,11 +248,7 @@ footer {
 }
 
 .carousel.vertical .carousel-inner {
-	height: 100%;
-	width: auto;
-
 	> .item {
-		width: auto;
 		-moz-transition: 0.6s ease-in-out top;
 		-o-transition: 0.6s ease-in-out top;
 		-webkit-transition: 0.6s ease-in-out top;
@@ -263,12 +259,9 @@ footer {
 			-o-transition: 0.6s ease-in-out;
 			-webkit-transition: 0.6s ease-in-out;
 			transition: 0.6s ease-in-out;
-
+			
 			&.next,
 			&.active.right {
-				-moz-transform: translate3d(0, 100%, 0);
-				-ms-transform: translate3d(0, 100%, 0);
-				-o-transform: translate3d(0, 100%, 0);
 				-webkit-transform: translate3d(0, 100%, 0);
 				transform: translate3d(0, 100%, 0);
 				top: 0;
@@ -276,9 +269,6 @@ footer {
 
 			&.prev,
 			&.active.left {
-				-moz-transform: translate3d(0, -100%, 0);
-				-ms-transform: translate3d(0, -100%, 0);
-				-o-transform: translate3d(0, -100%, 0);
 				-webkit-transform: translate3d(0, -100%, 0);
 				transform: translate3d(0, -100%, 0);
 				top: 0;
@@ -287,20 +277,11 @@ footer {
 			&.next.left,
 			&.prev.right,
 			&.active {
-				-moz-transform: translate3d(0, 0, 0);
-				-ms-transform: translate3d(0, 0, 0);
-				-o-transform: translate3d(0, 0, 0);
 				-webkit-transform: translate3d(0, 0, 0);
 				transform: translate3d(0, 0, 0);
 				top: 0;
 			}
 		}
-	}
-
-	> .active,
-	> .next,
-	> .prev {
-		display: block;
 	}
 
 	> .active {
@@ -309,9 +290,7 @@ footer {
 
 	> .next,
 	> .prev {
-		position: absolute;
 		top: 0;
-		width: 100%;
 	}
 
 	> .next {
