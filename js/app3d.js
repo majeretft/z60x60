@@ -34,8 +34,10 @@ App.prototype = {
 		var me = this;
 
 		var canvas = $('#scene')[0];
-
 		this.renderer = new THREE.WebGLRenderer({ alpha: true, canvas: canvas, antialias: true });
+
+		if (+window.devicePixelRatio > 1)
+			this.renderer.setPixelRatio(window.devicePixelRatio);
 		this.renderer.setSize(window.innerWidth, window.innerHeight);
 
 		this.camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 4000);
@@ -56,8 +58,10 @@ App.prototype = {
 		this.orbits.push(new THREE.OrbitControls(pointLight, canvas));
 
 		var onMouseWeel = function (e) {
-			var delta = e.deltaY || e.wheelDelta;
+			var delta = e.deltaY || e.wheelDelta || e.detail;
 			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+			if (e.stopPropagation)
+				e.stopPropagation();
 
 			var result = delta * 0.05;
 			me.changeFov(result);
@@ -67,6 +71,48 @@ App.prototype = {
 			document.addEventListener('wheel', onMouseWeel, false); // IE9+, FF17+, Ch31+
 		else if ('onmousewheel' in document)
 			document.addEventListener('mousewheel', onMouseWeel, false); // old
+		else
+			document.addEventListener('MozMousePixelScroll', onMouseWeel, false); // firefox
+
+		var dollyStart = new THREE.Vector2();
+		var dollyEnd = new THREE.Vector2();
+		var dollyDelta = new THREE.Vector2();
+
+		function touchstart(e) {
+			if (!e.touches || e.touches.length != 2)
+				return;
+
+			var dx = e.touches[0].pageX - e.touches[1].pageX;
+			var dy = e.touches[0].pageY - e.touches[1].pageY;
+			var distance = Math.sqrt(dx * dx + dy * dy);
+			dollyStart.set(0, distance);
+		}
+
+		function touchmove(e) {
+			if (!e.touches || e.touches.length != 2)
+				return;
+
+			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+			if (e.stopPropagation)
+				e.stopPropagation();
+
+			var dx = e.touches[0].pageX - e.touches[1].pageX;
+			var dy = e.touches[0].pageY - e.touches[1].pageY;
+			var distance = Math.sqrt(dx * dx + dy * dy);
+
+			dollyEnd.set(0, distance);
+			dollyDelta.subVectors(dollyEnd, dollyStart);
+
+			if (dollyDelta.y > 0)
+				me.changeFov(-1);
+			else if (dollyDelta.y < 0)
+				me.changeFov(1);
+
+			dollyStart.copy(dollyEnd);
+		}
+
+		this.renderer.domElement.addEventListener('touchstart', touchstart, false);
+		this.renderer.domElement.addEventListener('touchmove', touchmove, false);
 
 		var loader = new THREE.OBJMTLLoader();
 		var path = 'obj3d/';
@@ -109,10 +155,21 @@ $(function () {
 	app.buildScene();
 
 	$(window).resize(function () {
+		if (+window.devicePixelRatio > 1)
+			app.renderer.setPixelRatio(window.devicePixelRatio);
+
 		app.renderer.setSize(window.innerWidth, window.innerHeight);
 		app.camera.aspect = window.innerWidth / window.innerHeight;
 		app.camera.updateProjectionMatrix();
 	});
+
+	var diffbuffer = {
+		matColor: viewCfg.matColor,
+		camPos: app.camera.position.clone(),
+		camFov: app.camera.fov
+	};
+
+	var firstFrame = true;
 
 	var render = function () {
 		if (viewCfg.autorotate) {
@@ -120,6 +177,18 @@ $(function () {
 				app.orbits[i].update();
 			}
 		}
+
+		if (diffbuffer.matColor == viewCfg.matColor
+			&& diffbuffer.camPos.equals(app.camera.position)
+			&& diffbuffer.camFov == app.camera.fov
+			&& !firstFrame)
+			return;
+
+		diffbuffer.matColor = viewCfg.matColor;
+		diffbuffer.camPos = app.camera.position.clone();
+		diffbuffer.camFov = app.camera.fov;
+
+		firstFrame = false;
 
 		if (viewCfg.matColor) {
 			app.changeColor(viewCfg.matColor);

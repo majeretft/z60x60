@@ -243,6 +243,10 @@
 					forceHeight: false
 				});
 			}
+
+			if (!!navigator.userAgent.match(/ipod|ipad|iphone.*Version\/[\d\.]+.*Safari/i)) {
+				$('.carousel.vertical').removeClass('vertical');
+			}
 		});
 	</script>
 </body>

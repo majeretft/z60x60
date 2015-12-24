@@ -1638,16 +1638,16 @@ THREE.EventDispatcher.prototype.apply( THREE.OBJMTLLoader.prototype );
 		this.rotateSpeed = 1.0;
 
 		// Set to false to disable panning
-		this.enablePan = !!window.isDebug;
+		this.enablePan = false;
 		this.keyPanSpeed = 7.0;	// pixels moved per arrow key push
 
 		// Set to true to automatically rotate around the target
 		// If auto-rotate is enabled, you must call controls.update() in your animation loop
-		this.autoRotate = !window.isDebug;
+		this.autoRotate = true;
 		this.autoRotateSpeed = 2.0; // 30 seconds per round when fps is 60
 
 		// Set to false to disable use of the keys
-		this.enableKeys = true;
+		this.enableKeys = false;
 
 		// The four arrow keys
 		this.keys = { LEFT: 37, UP: 38, RIGHT: 39, BOTTOM: 40 };
