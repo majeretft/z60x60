@@ -1,0 +1,3 @@
+Options -Indexes
+RemoveHandler .html .htm
+AddType text/plain .obj .mtl
