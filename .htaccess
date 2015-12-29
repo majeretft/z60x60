@@ -1,3 +1,7 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^xn--6060-63d1f\.xn--p1ai$ [NC]
+RewriteRule ^(.*)$ http://z60x60.ru/$1 [L,R=301]
+
 Options -Indexes
 RemoveHandler .html .htm
 AddType text/plain .obj .mtl
