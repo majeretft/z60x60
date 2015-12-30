@@ -1,7 +1,7 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 30.12.2015 14:13:53
+# File Created: 30.12.2015 14:10:20
 
-newmtl 60x60_outer_cap_mat
+newmtl 60x60_all_mat
 	Ns 27.0000
 	Ni 1.5000
 	d 1.0000
@@ -12,3 +12,5 @@ newmtl 60x60_outer_cap_mat
 	Kd 0.3804 0.3804 0.3804
 	Ks 0.2430 0.2430 0.2430
 	Ke 0.0000 0.0000 0.0000
+	map_bump 60x60_all_bump_map.jpg
+	bump 60x60_all_bump_map.jpg

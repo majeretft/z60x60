@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 28.12.2015 10:44:56
+# File Created: 30.12.2015 14:13:53
 
 mtllib 60x60_outer_cap.mtl
 
@@ -542,7 +542,7 @@ vn 0.7531 -0.7156 2.3178
 # 204 vertex normals
 
 g 60x60_outer_cap
-usemtl cap_60x60_outer_simple
+usemtl 60x60_outer_cap_mat
 s off
 f 1//1 2//1 3//1 
 f 3//1 2//1 4//1 

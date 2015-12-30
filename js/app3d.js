@@ -2,7 +2,15 @@ var App = function () {
 	this._fovMin = 25;
 	this._fovMax = 50;
 	this.orbits = [];
-	this.modelName = App.getQueryStringParam('obj');
+
+	var models = {
+		'60x60_outer_pyramid': { obj: 'obj3d/60x60_outer_pyramid.obj', mtl: 'obj3d/60x60_cap.mtl' },
+		'60x60_outer_cap': { obj: 'obj3d/60x60_outer_cap.obj', mtl: 'obj3d/60x60_outer_cap.mtl' },
+		'60x60_inner_pyramid': { obj: 'obj3d/60x60_inner_pyramid.obj', mtl: 'obj3d/60x60_cap.mtl' },
+		'60x60_inner_new': { obj: 'obj3d/60x60_inner_new.obj', mtl: 'obj3d/60x60_cap.mtl' }
+	};
+
+	this.modelName = models[App.getQueryStringParam('obj')];
 };
 
 App.getGLState = function () {
@@ -115,8 +123,7 @@ App.prototype = {
 		this.renderer.domElement.addEventListener('touchmove', touchmove, false);
 
 		var loader = new THREE.OBJMTLLoader();
-		var path = 'obj3d/';
-		loader.load(path + this.modelName + '.obj', path + this.modelName + '.mtl', function (mdl) {
+		loader.load(this.modelName.obj, this.modelName.mtl, function (mdl) {
 			mdl.scale.set(0.6, 0.6, 0.6);
 			mdl.position.y = -10;
 
