@@ -161,13 +161,21 @@ $(function () {
 
 	app.buildScene();
 
-	$(window).resize(function () {
+	var resize = function () {
 		if (+window.devicePixelRatio > 1)
 			app.renderer.setPixelRatio(window.devicePixelRatio);
 
 		app.renderer.setSize(window.innerWidth, window.innerHeight);
 		app.camera.aspect = window.innerWidth / window.innerHeight;
 		app.camera.updateProjectionMatrix();
+	};
+
+	$(window).on('orientationchange', function () {
+		resize();
+	});
+
+	$(window).resize(function () {
+		resize();
 	});
 
 	var diffbuffer = {
