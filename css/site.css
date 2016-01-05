@@ -74,6 +74,21 @@ main .product > p {
     margin-right: auto;
   }
 }
+main .product-details ul {
+  padding-left: 0;
+  list-style: none;
+}
+main .product-details ul > li {
+  padding-left: 2em;
+  margin-bottom: 5px;
+}
+main .product-details ul > li:before {
+  content: '\f087';
+  font-family: FontAwesome;
+  display: inline-block;
+  width: 2em;
+  margin-left: -2em;
+}
 main .product-details .carousel-indicators {
   border-radius: 5px;
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgUGMgAjAxEAlGFVJHIUCAAQBN4gA6va9mOQAAAABJRU5ErkJggg==') /*../img/transparent_black.png*/;
