@@ -175,6 +175,9 @@ footer .contacts {
 .red-line {
   text-indent: 2em;
 }
+.list-horizontal > li {
+  display: inline-block;
+}
 .well {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpi/Pjx400GIgATA5FgVCF1FAIEGADqVwPAfQXy1QAAAABJRU5ErkJggg==') /*../img/transparent_white.png*/;
   background-color: transparent;
