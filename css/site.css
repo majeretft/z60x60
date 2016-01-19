@@ -273,3 +273,9 @@ footer .contacts {
   font-weight: normal;
   font-style: normal;
 }
+/* Yandex share */
+#social {
+  display: block;
+  margin: 10px auto 5px auto;
+  text-align: center;
+}
