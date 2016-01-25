@@ -292,6 +292,16 @@ footer {
 	color: @color-text-luma;
 }
 
+.carousel-inner {
+	// Added to fix crhome rendering bug
+	z-index: 1;
+}
+
+.carousel-control {
+	// Added to fix crhome rendering bug
+	z-index: 2;
+}
+
 .carousel.vertical .carousel-inner {
 	> .item {
 		-moz-transition: 0.6s ease-in-out top;
