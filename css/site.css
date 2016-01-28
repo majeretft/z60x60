@@ -74,6 +74,21 @@ main .product > p {
     margin-right: auto;
   }
 }
+@media (min-width: 768px) {
+  main .product .text-hx {
+    height: 180px;
+  }
+}
+@media (min-width: 992px) {
+  main .product .text-hx {
+    height: 140px;
+  }
+}
+@media (min-width: 1200px) {
+  main .product .text-hx {
+    height: 120px;
+  }
+}
 main .product-details ul {
   padding-left: 0;
   list-style: none;
@@ -169,18 +184,20 @@ main .promo > div {
 footer .contacts {
   font-size: 1.3em;
 }
-#bg1,
+/*#bg1,
 #bg2,
 #bg3 {
-  background-attachment: fixed;
-  background-image: url(../img/bg_caps_three_3_500x.png);
+	background-attachment: fixed;
+	background-image: url(../img/bg_caps_three_3_500x.png);
 }
+
 #bg2 {
-  background-image: url(../img/bg_caps_three_2_500x.png);
+	background-image: url(../img/bg_caps_three_2_500x.png);
 }
+
 #bg3 {
-  background-image: url(../img/bg_caps_three_1_500x.png);
-}
+	background-image: url(../img/bg_caps_three_1_500x.png);
+}*/
 .banner {
   margin-top: 20px;
 }

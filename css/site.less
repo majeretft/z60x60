@@ -9,6 +9,10 @@
 @color-main: #FFF5E6;
 @color-add: #00204D;
 
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
 html {
 	overflow-x: hidden;
 	background-color: @color-add;
@@ -103,6 +107,20 @@ main {
 				max-width: 380px;
 				margin-left: auto;
 				margin-right: auto;
+			}
+		}
+
+		.text-hx {
+			@media (min-width: @screen-sm-min) {
+				height: 180px;
+			}
+
+			@media (min-width: @screen-md-min) {
+				height: 140px;
+			}
+
+			@media (min-width: @screen-lg-min) {
+				height: 120px;
 			}
 		}
 	}
@@ -234,7 +252,7 @@ footer {
 	}
 }
 
-#bg1,
+/*#bg1,
 #bg2,
 #bg3 {
 	background-attachment: fixed;
@@ -247,7 +265,7 @@ footer {
 
 #bg3 {
 	background-image: url(../img/bg_caps_three_1_500x.png);
-}
+}*/
 
 .banner {
 	margin-top: 20px;
