@@ -44,5 +44,11 @@
       "js/objMtlLoader-r73.js",
       "js/orbitControls-r73.js"
     ]
+  },
+  {
+    "outputFileName": "js/app.js",
+    "inputFiles": [
+      "js/app.js"
+    ]
   }
 ]
