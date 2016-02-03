@@ -114,6 +114,8 @@ main .product-details .product-3d .embed-responsive-16by9 {
   width: 80%;
   margin-right: auto;
   margin-left: auto;
+  background-image: url(../img/watermark-3d.png);
+  background-repeat: repeat;
 }
 main .product-details .product-3d .embed-responsive-16by9 iframe {
   border: 1px solid #b0b0b0;
