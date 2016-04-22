@@ -1,6 +1,11 @@
 RewriteEngine On
+
 RewriteCond %{HTTP_HOST} ^(www.)?xn--6060-63d1f\.xn--p1ai$ [NC]
 RewriteRule ^(.*)$ http://z60x60.ru/$1 [L,R=301]
+
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
 Options -Indexes
 RemoveHandler .html .htm
