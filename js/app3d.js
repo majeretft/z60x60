@@ -5,7 +5,7 @@ var App = function () {
 
 	var models = {
 		'60x60_outer_pyramid': { obj: 'obj3d/60x60_outer_pyramid.obj', mtl: 'obj3d/60x60_cap.mtl' },
-		'60x60_outer_cap': { obj: 'obj3d/60x60_outer_cap.obj', mtl: 'obj3d/60x60_outer_cap.mtl' },
+		'60x60_outer_cap': { obj: 'obj3d/60x60_outer_cap2.obj', mtl: 'obj3d/60x60_outer_cap2.mtl' },
 		'60x60_inner_pyramid': { obj: 'obj3d/60x60_inner_pyramid.obj', mtl: 'obj3d/60x60_cap.mtl' },
 		'60x60_inner_new': { obj: 'obj3d/60x60_inner_new.obj', mtl: 'obj3d/60x60_cap.mtl' }
 	};
@@ -29,7 +29,7 @@ App.getQueryStringParam = function (name) {
 	var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
 	var results = regex.exec(location.search);
 
-	return results == null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+	return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
 App.prototype = {
@@ -67,7 +67,7 @@ App.prototype = {
 
 		var onMouseWeel = function (e) {
 			var delta = e.deltaY || e.wheelDelta || e.detail;
-			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+			e.preventDefault ? e.preventDefault() : e.returnValue = false;
 			if (e.stopPropagation)
 				e.stopPropagation();
 
@@ -87,7 +87,7 @@ App.prototype = {
 		var dollyDelta = new THREE.Vector2();
 
 		function touchstart(e) {
-			if (!e.touches || e.touches.length != 2)
+			if (!e.touches || e.touches.length !== 2)
 				return;
 
 			var dx = e.touches[0].pageX - e.touches[1].pageX;
@@ -97,10 +97,10 @@ App.prototype = {
 		}
 
 		function touchmove(e) {
-			if (!e.touches || e.touches.length != 2)
+			if (!e.touches || e.touches.length !== 2)
 				return;
 
-			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+			e.preventDefault ? e.preventDefault() : e.returnValue = false;
 			if (e.stopPropagation)
 				e.stopPropagation();
 
@@ -142,7 +142,7 @@ App.prototype = {
 	},
 
 	changeColor: function (newColor) {
-		if (!this.obj3d || this.oldColor == newColor)
+		if (!this.obj3d || this.oldColor === newColor)
 			return;
 
 		var obj = this.obj3d.children[2];
@@ -186,16 +186,16 @@ $(function () {
 
 	var firstFrame = true;
 
-	var render = function () {
+	var render = function() {
 		if (viewCfg.autorotate) {
 			for (var i = 0; i < app.orbits.length; i++) {
 				app.orbits[i].update();
 			}
 		}
 
-		if (diffbuffer.matColor == viewCfg.matColor
+		if (diffbuffer.matColor === viewCfg.matColor
 			&& diffbuffer.camPos.equals(app.camera.position)
-			&& diffbuffer.camFov == app.camera.fov
+			&& diffbuffer.camFov === app.camera.fov
 			&& !firstFrame)
 			return;
 
@@ -210,12 +210,12 @@ $(function () {
 		}
 
 		app.renderer.render(app.scene, app.camera);
-	}
+	};
 
-	var animate = function () {
+	var animate = function() {
 		requestAnimationFrame(animate);
 		render();
-	}
+	};
 
 	animate();
 });
