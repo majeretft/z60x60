@@ -9,15 +9,6 @@
     ]
   },
   {
-    "outputFileName": "css/fw.css",
-    "inputFiles": [
-      "css/bootstrap.css",
-      "css/bootstrap-theme.css",
-      "css/font-awesome.css",
-      "css/bootstrap-colorpicker.css"
-    ]
-  },
-  {
     "outputFileName": "js/ie8.js",
     "inputFiles": [
       "js/modernizr-2.8.3.min.js",
@@ -49,6 +40,14 @@
     "outputFileName": "js/app.js",
     "inputFiles": [
       "js/app.js"
+    ]
+  },
+  {
+    "outputFileName": "css/fw.css",
+    "inputFiles": [
+      "css/bootstrap-colorpicker.css",
+      "css/bootstrap.css",
+      "css/font-awesome.css"
     ]
   }
 ]
