@@ -6,7 +6,7 @@ var App = function () {
 	var models = {
 		'60x60_outer_pyramid': { obj: 'obj3d/60x60_outer_pyramid.obj', mtl: 'obj3d/60x60_cap.mtl' },
 		'60x60_outer_cap': { obj: 'obj3d/60x60_outer_cap2.obj', mtl: 'obj3d/60x60_outer_cap2.mtl' },
-		'60x60_inner_pyramid': { obj: 'obj3d/60x60_inner_pyramid.obj', mtl: 'obj3d/60x60_cap.mtl' },
+		'60x60_inner_pyramid': { obj: 'obj3d/60x60_inner_pyramid2.obj', mtl: 'obj3d/60x60_cap.mtl' },
 		'60x60_inner_new': { obj: 'obj3d/60x60_inner_new.obj', mtl: 'obj3d/60x60_cap.mtl' }
 	};
 
