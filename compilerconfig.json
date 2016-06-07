@@ -1,6 +1,10 @@
-[
+﻿[
   {
     "outputFile": "css/site.css",
     "inputFile": "css/site.less"
+  },
+  {
+    "outputFile": "css/site2.css",
+    "inputFile": "less/all.less"
   }
 ]

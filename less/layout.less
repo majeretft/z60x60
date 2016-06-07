@@ -1,0 +1,106 @@
+﻿@import (once) 'variables.less';
+
+html,
+body,
+#wrapper {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+body {
+	background: @background;
+
+	> #wrapper {
+		height: auto;
+		min-height: 100%;
+	}
+}
+
+header {
+	>div.container {
+		background-image: @header-background-url;
+		background-repeat: no-repeat;
+		height: @header-height;
+	}
+
+	.contacts {
+		padding-top: 10px;
+		float: right;
+		color: @header-text-color;
+		font-size: 1.3em;
+		text-align: right;
+
+		a {
+			color: @footer-text-color;
+			text-decoration: none;
+
+			&:visited,
+			&:hover {
+				color: @footer-text-color;
+				text-decoration: none;
+			}
+		}
+	}
+
+	@media (min-width: @screen-sm-min) {
+		height: @header-height;
+		background-color: @header-background-color;
+	}
+}
+
+footer {
+	background-color: @footer-background-color;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 1.3em;
+	
+	height: @footer-height;
+	margin-top: -@footer-height;
+
+	.contacts {
+		color: @footer-text-color;
+
+		a {
+			color: @footer-text-color;
+			text-decoration: none;
+
+			&:visited,
+			&:hover {
+				color: @footer-text-color;
+				text-decoration: none;
+			}
+		}
+	}
+
+	/* Yandex share */
+	#social {
+		display: block;
+		margin: 10px auto 5px auto;
+		text-align: center;
+	}
+}
+
+main {
+	padding-bottom: @footer-height;
+
+	@media (max-width: @screen-sm-min) {
+		padding-top: 70px;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		padding-top: 30px;
+	}
+}
+
+.highlight-text {
+	color: @text-color-highlight;
+}
+
+.main-menu {
+	position: absolute;
+	top: 80px;
+	z-index: 10;
+	width: 100%;
+	text-align: center;
+}

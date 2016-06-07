@@ -1,0 +1,77 @@
+﻿@import (once) 'variables.less';
+
+.well {
+	border: 1px solid @well-border-color;
+	border-radius: @container-border-radius;
+	background-color: @well-background-color;
+}
+
+.banner {
+	padding-bottom: @content-spacing;
+
+	img {
+		border: 1px solid @well-border-color;
+		border-radius: @container-border-radius;
+	}
+}
+
+.card {
+	border: 1px solid @well-border-color;
+	border-top-left-radius: @container-border-radius;
+	border-top-right-radius: @container-border-radius;
+	overflow: hidden;
+	background-color: @well-background-color;
+	margin-bottom: @content-spacing;
+
+	img {
+		border-bottom: 1px solid #ccc;
+	}
+
+	h3 {
+		padding-left: 10px;
+		padding-right: 10px;
+		text-align: center;
+	}
+
+	div {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	a {
+		border-radius: 0;
+		border-left: none;
+		border-right: none;
+		border-bottom: none;
+	}
+		
+		@media (min-width: @screen-sm-min) {
+			h3 {
+				height: 52px;
+			}
+
+			div {
+				height: 175px;
+			}
+		}
+
+		@media (min-width: @screen-md-min) {
+			h3 {
+				height: 78px;
+			}
+			
+			div {
+				height: 220px;
+			}
+		}
+
+		@media (min-width: @screen-lg-min) {
+			h3 {
+				height: 52px;
+			}
+
+			div {
+				height: 170px;
+			}
+		}
+}
