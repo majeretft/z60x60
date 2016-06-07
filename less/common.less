@@ -1,3 +1,37 @@
-﻿.no-break {
+﻿@import (once) 'variables.less';
+
+.no-break {
 	white-space: nowrap;
+}
+
+.well {
+	.content-block();
+}
+
+.content-container {
+	.content-block();
+}
+
+.content-container-titled {
+	.content-block();
+	padding-top: 0;
+}
+
+.banner {
+	padding-bottom: @content-spacing;
+
+	img {
+		border: 1px solid @well-border-color;
+		border-radius: @container-border-radius;
+	}
+}
+
+.content-block() {
+	border: 1px solid @well-border-color;
+	border-radius: @container-border-radius;
+	background-color: @well-background-color;
+
+	padding: 10px;
+
+	margin-bottom: @content-spacing;
 }

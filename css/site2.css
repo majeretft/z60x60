@@ -1,6 +1,35 @@
 ﻿.no-break {
   white-space: nowrap;
 }
+.well {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.content-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.content-container-titled {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+  padding-top: 0;
+}
+.banner {
+  padding-bottom: 20px;
+}
+.banner img {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 html,
 body,
 #wrapper {
@@ -90,18 +119,6 @@ main {
   z-index: 10;
   width: 100%;
   text-align: center;
-}
-.well {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-}
-.banner {
-  padding-bottom: 20px;
-}
-.banner img {
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 .card {
   border: 1px solid #ccc;
