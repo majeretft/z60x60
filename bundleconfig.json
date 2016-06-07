@@ -4,8 +4,7 @@
     "inputFiles": [
       "js/jquery-1.11.3.js",
       "js/bootstrap-colorpicker.js",
-      "js/bootstrap.js",
-      "js/skrollr.min.js"
+      "js/bootstrap.js"
     ]
   },
   {
