@@ -4,10 +4,6 @@
 	white-space: nowrap;
 }
 
-.well {
-	.content-block();
-}
-
 .content-container {
 	.content-block();
 }
@@ -15,6 +11,10 @@
 .content-container-titled {
 	.content-block();
 	padding-top: 0;
+}
+
+.content-block {
+	margin-bottom: @content-spacing;
 }
 
 .banner {
@@ -31,7 +31,12 @@
 	border-radius: @container-border-radius;
 	background-color: @well-background-color;
 
-	padding: 10px;
+	padding: 15px;
 
 	margin-bottom: @content-spacing;
+}
+
+.margin-center() {
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -1,27 +1,23 @@
 ﻿.no-break {
   white-space: nowrap;
 }
-.well {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 10px;
-  margin-bottom: 20px;
-}
 .content-container {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 20px;
 }
 .content-container-titled {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 20px;
   padding-top: 0;
+}
+.content-block {
+  margin-bottom: 20px;
 }
 .banner {
   padding-bottom: 20px;
@@ -119,6 +115,24 @@ main {
   z-index: 10;
   width: 100%;
   text-align: center;
+}
+#photos {
+  max-width: 470px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-list th,
+.product-list td {
+  text-align: center;
+}
+.product-list > tbody > tr > td {
+  vertical-align: middle;
+}
+.product-list > tbody > tr > td:last-child {
+  padding: 1px;
+  width: 152px;
+  min-width: 152px;
+  max-width: 152px;
 }
 .card {
   border: 1px solid #ccc;
