@@ -26,6 +26,14 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+@media (min-width: 768px) {
+  .bordered-column {
+    border-right: 1px solid #ccc;
+  }
+  .bordered-column:last-child {
+    border-right: none;
+  }
+}
 html,
 body,
 #wrapper {
@@ -134,6 +142,24 @@ main {
   min-width: 152px;
   max-width: 152px;
 }
+.bordered-column > .product-promo-item {
+  height: auto;
+}
+@media (min-width: 768px) {
+  .bordered-column > .product-promo-item {
+    height: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .bordered-column > .product-promo-item {
+    height: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .bordered-column > .product-promo-item {
+    height: 60px;
+  }
+}
 .card {
   border: 1px solid #ccc;
   border-top-left-radius: 5px;
@@ -164,23 +190,41 @@ main {
   .card h3 {
     height: 52px;
   }
-  .card div {
-    height: 175px;
+  .card p {
+    height: 60px;
   }
 }
 @media (min-width: 992px) {
   .card h3 {
     height: 78px;
   }
-  .card div {
-    height: 220px;
+  .card p {
+    height: 80px;
   }
 }
 @media (min-width: 1200px) {
   .card h3 {
     height: 52px;
   }
-  .card div {
-    height: 170px;
+  .card p {
+    height: 60px;
+  }
+}
+.bordered-column > .promo-item {
+  height: auto;
+}
+@media (min-width: 768px) {
+  .bordered-column > .promo-item {
+    height: 221px;
+  }
+}
+@media (min-width: 992px) {
+  .bordered-column > .promo-item {
+    height: 181px;
+  }
+}
+@media (min-width: 1200px) {
+  .bordered-column > .promo-item {
+    height: 161px;
   }
 }

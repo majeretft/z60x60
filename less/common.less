@@ -26,6 +26,16 @@
 	}
 }
 
+@media(min-width: @screen-sm-min) {
+	.bordered-column {
+		border-right: 1px solid @well-border-color;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
 .content-block() {
 	border: 1px solid @well-border-color;
 	border-radius: @container-border-radius;

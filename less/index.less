@@ -35,8 +35,8 @@
 				height: 52px;
 			}
 
-			div {
-				height: 175px;
+			p {
+				height: 60px;
 			}
 		}
 
@@ -45,8 +45,8 @@
 				height: 78px;
 			}
 			
-			div {
-				height: 220px;
+			p {
+				height: 80px;
 			}
 		}
 
@@ -55,8 +55,24 @@
 				height: 52px;
 			}
 
-			div {
-				height: 170px;
+			p {
+				height: 60px;
 			}
 		}
+}
+
+.bordered-column > .promo-item {
+	height: auto;
+
+	@media(min-width: @screen-sm-min) {
+		height: 221px;
+	}
+
+	@media(min-width: @screen-md-min) {
+		height: 181px;
+	}
+
+	@media(min-width: @screen-lg-min) {
+		height: 161px;
+	}
 }
