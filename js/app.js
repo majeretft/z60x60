@@ -7,9 +7,8 @@ $(function () {
 	};
 	
 	var init3D = function() {
-		if ($('.product-3d').length !== 1) {
+		if ($('#obj3d').length !== 1)
 			return;
-		}
 
 		var getGlState = function() {
 			try {
@@ -23,21 +22,22 @@ $(function () {
 		if (!getGlState())
 			return;
 
-		$('.product-3d').removeClass('hidden');
+		$('#obj3d').removeClass('hidden');
 
 		var frame = $('#frame3d')[0];
-		frame.src = $(frame).attr('srcTarget');
+		frame.src = $(frame).data('src');
 
 		$('#toggle').on('click', function(e) {
 			if (!frame.contentWindow.viewCfg)
 				return;
+
 			frame.contentWindow.viewCfg.autorotate = !frame.contentWindow.viewCfg.autorotate;
 
 			var remCls = frame.contentWindow.viewCfg.autorotate ? 'fa-play-circle' : 'fa-pause-circle';
 			var addCls = frame.contentWindow.viewCfg.autorotate ? 'fa-pause-circle' : 'fa-play-circle';
 
-			$(e.currentTarget).toggleClass(remCls);
-			$(e.currentTarget).toggleClass(addCls);
+			$(e.currentTarget).children('span').toggleClass(remCls);
+			$(e.currentTarget).children('span').toggleClass(addCls);
 		});
 
 		$('#eyedropper').colorpicker({ format: 'hex', color: 'red' }).on('changeColor.colorpicker', function(event) {

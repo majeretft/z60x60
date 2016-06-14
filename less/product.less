@@ -38,3 +38,35 @@
 		height: 60px;
 	}
 }
+
+.embed-responsive-16by9 {
+	background-image: url(../img/watermark-3d.png);
+	background-repeat: repeat;
+	margin-bottom: 15px;
+
+	@media(max-width: @screen-sm-min) {
+		margin-right: auto;
+		margin-left: auto;
+		background-size: 100px;
+	}
+
+	@media(min-width: @screen-sm-min) {
+		background-size: 150px;
+	}
+}
+
+#frame3d {
+	border: 1px solid @well-border-color;
+}
+
+.item-data-scheme {
+	height: auto;
+
+	@media(min-width: @screen-md-min) {
+		height: 380px;
+	}
+
+	@media(min-width: @screen-lg-min) {
+		height: 440px;
+	}
+}

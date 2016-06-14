@@ -4,6 +4,7 @@
 .content-container,
 .content-container-titled {
   padding: 0;
+  padding-bottom: 20px;
   border: none;
 }
 @media (min-width: 768px) {
@@ -173,6 +174,39 @@ main {
 @media (min-width: 1200px) {
   .bordered-column > .product-promo-item {
     height: 60px;
+  }
+}
+.embed-responsive-16by9 {
+  background-image: url(../img/watermark-3d.png);
+  background-repeat: repeat;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .embed-responsive-16by9 {
+    margin-right: auto;
+    margin-left: auto;
+    background-size: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .embed-responsive-16by9 {
+    background-size: 150px;
+  }
+}
+#frame3d {
+  border: 1px solid #ccc;
+}
+.item-data-scheme {
+  height: auto;
+}
+@media (min-width: 992px) {
+  .item-data-scheme {
+    height: 380px;
+  }
+}
+@media (min-width: 1200px) {
+  .item-data-scheme {
+    height: 440px;
   }
 }
 .card {
