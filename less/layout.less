@@ -9,7 +9,9 @@ body,
 }
 
 body {
-	background: @background;
+	@media(min-width: @screen-sm-min) {
+		background: @background;
+	}
 
 	> #wrapper {
 		height: auto;
@@ -85,7 +87,7 @@ main {
 	padding-bottom: @footer-height;
 
 	@media (max-width: @screen-sm-min) {
-		padding-top: 70px;
+		padding-top: 50px;
 	}
 
 	@media (min-width: @screen-sm-min) {

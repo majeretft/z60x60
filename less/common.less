@@ -4,13 +4,21 @@
 	white-space: nowrap;
 }
 
-.content-container {
-	.content-block();
+.content-container,
+.content-container-titled {
+	padding: 0;
+	border: none;
 }
 
-.content-container-titled {
-	.content-block();
-	padding-top: 0;
+@media(min-width: @screen-sm-min) {
+	.content-container {
+		.content-block();
+	}
+
+	.content-container-titled {
+		.content-block();
+		padding-top: 0;
+	}
 }
 
 .content-block {
