@@ -16,66 +16,6 @@ html {
 	background-color: @color-add;
 }
 
-header,
-footer {
-	padding: 10px 5px;
-	background-color: @color-add;
-	color: @color-text-add;
-
-	.link {
-		color: @color-text-add;
-
-		&:hover {
-			color: darken(@color-text-add, 10%);
-		}
-	}
-}
-
-header {
-	.header-text {
-		font-size: 1.25em;
-	}
-
-	.menu {
-		margin-top: 5px;
-
-		a {
-			margin-right: 5px;
-		}
-	}
-
-	nav.visible-xs-block {
-		a.btn {
-			margin-top: 10px;
-		}
-
-		.fa-bars {
-			font-size: 33px;
-		}
-
-		#menu-xs ul {
-			list-style: none;
-			font-size: 1.1em;
-			margin: 15px 0 0 0;
-			padding: 0;
-
-			li {
-				margin-bottom: 5px;
-			}
-		}
-	}
-
-	.contacts {
-		font-size: 1.15em;
-	}
-
-	@media (min-width: 992px) {
-		.contacts {
-			font-size: 1.3em;
-		}
-	}
-}
-
 
 
 main {
@@ -209,77 +149,6 @@ main {
 	}
 }
 
-footer {
-	.contacts {
-		font-size: 1.3em;
-	}
-}
-
-.card {
-	border: 1px solid @well-border-color;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	overflow: hidden;
-	background-color: @well-background-color;
-	margin-bottom: 20px;
-
-	img {
-		border-bottom: 1px solid #ccc;
-	}
-
-	h3 {
-		padding-left: 10px;
-		padding-right: 10px;
-		text-align: center;
-	}
-
-	div {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-
-	a {
-		border-radius: 0;
-		border-left: none;
-		border-right: none;
-		border-bottom: none;
-	}
-		
-		@media (min-width: @screen-sm-min) {
-			h3 {
-				height: 52px;
-			}
-
-			div {
-				height: 175px;
-			}
-		}
-
-		@media (min-width: @screen-md-min) {
-			h3 {
-				height: 78px;
-			}
-			
-			div {
-				height: 220px;
-			}
-		}
-
-		@media (min-width: @screen-lg-min) {
-			h3 {
-				height: 52px;
-			}
-
-			div {
-				height: 170px;
-			}
-		}
-}
-
-.banner {
-	margin-top: 20px;
-}
-
 .list-horizontal {
 	> li {
 		display: inline-block;
@@ -304,94 +173,8 @@ footer {
 	}
 }
 
-.call-to-action {
-	color: @color-text-luma;
-}
-
-.carousel-inner {
-	// Added to fix crhome rendering bug
-	z-index: 1;
-}
-
-.carousel-control {
-	// Added to fix crhome rendering bug
-	z-index: 2;
-}
-
-.carousel.vertical .carousel-inner {
-	> .item {
-		-moz-transition: 0.6s ease-in-out top;
-		-o-transition: 0.6s ease-in-out top;
-		-webkit-transition: 0.6s ease-in-out top;
-		transition: 0.6s ease-in-out top;
-
-		@media all and (transform-3d), (-webkit-transform-3d) {
-			-moz-transition: 0.6s ease-in-out;
-			-o-transition: 0.6s ease-in-out;
-			-webkit-transition: 0.6s ease-in-out;
-			transition: 0.6s ease-in-out;
-
-			&.next,
-			&.active.right {
-				-webkit-transform: translate3d(0, 100%, 0);
-				transform: translate3d(0, 100%, 0);
-				top: 0;
-			}
-
-			&.prev,
-			&.active.left {
-				-webkit-transform: translate3d(0, -100%, 0);
-				transform: translate3d(0, -100%, 0);
-				top: 0;
-			}
-
-			&.next.left,
-			&.prev.right,
-			&.active {
-				-webkit-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-				top: 0;
-			}
-		}
-	}
-
-	> .active {
-		top: 0;
-	}
-
-	> .next,
-	> .prev {
-		top: 0;
-	}
-
-	> .next {
-		top: 100%;
-	}
-
-	> .prev {
-		top: -100%;
-	}
-
-	> .next.left,
-	> .prev.right {
-		top: 0;
-	}
-
-	> .active.left {
-		top: -100%;
-	}
-
-	> .active.right {
-		top: 100%;
-	}
-}
-
 .font-115 {
 	font-size: 1.15em;
-}
-
-.no-break {
-	white-space: nowrap;
 }
 
 .margin-bottom(@x) {
@@ -405,11 +188,4 @@ footer {
 		background-image: url("@{file-2x}");
 		background-size: @width-1x @height-1x;
 	}
-}
-
-/* Yandex share */
-#social {
-	display: block;
-	margin: 10px auto 5px auto;
-	text-align: center;
 }

@@ -26,6 +26,12 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+.carousel-inner {
+  z-index: 1;
+}
+.carousel-control {
+  z-index: 2;
+}
 @media (min-width: 768px) {
   .bordered-column {
     border-right: 1px solid #ccc;

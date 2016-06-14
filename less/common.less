@@ -26,6 +26,16 @@
 	}
 }
 
+.carousel-inner {
+	// Added to fix crhome rendering bug
+	z-index: 1;
+}
+
+.carousel-control {
+	// Added to fix crhome rendering bug
+	z-index: 2;
+}
+
 @media(min-width: @screen-sm-min) {
 	.bordered-column {
 		border-right: 1px solid @well-border-color;
