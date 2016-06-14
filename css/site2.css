@@ -176,20 +176,20 @@ main {
     height: 60px;
   }
 }
-.embed-responsive-16by9 {
+#obj3d .embed-responsive-16by9 {
   background-image: url(../img/watermark-3d.png);
   background-repeat: repeat;
   margin-bottom: 15px;
 }
 @media (max-width: 768px) {
-  .embed-responsive-16by9 {
+  #obj3d .embed-responsive-16by9 {
     margin-right: auto;
     margin-left: auto;
     background-size: 100px;
   }
 }
 @media (min-width: 768px) {
-  .embed-responsive-16by9 {
+  #obj3d .embed-responsive-16by9 {
     background-size: 150px;
   }
 }
