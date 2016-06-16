@@ -2,3 +2,6 @@ User-agent: *
 Disallow: /errors
 Disallow: /rc
 Disallow: /http404.html
+
+Host: http://z60x60.ru
+Sitemap: http://z60x60.ru/sitemap.xml
