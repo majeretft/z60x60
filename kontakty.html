@@ -138,7 +138,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12">
-					<div class="content-container-titled">
+					<div class="content-container-titled" itemscope itemtype="http://schema.org/LocalBusiness">
 						<div class="page-header">
 							<h1 class="text-center ">Контактная информация</h1>
 						</div>
@@ -148,13 +148,21 @@
 						</p>
 						<p>Осуществляем доставку по всей России</p>
 						<h3 class="text-center"><span class="fa fa-phone"></span> Телефон</h3>
-						<p class="lead text-center"><b>+7 (920) 968-02-56</b></p>
-						<p class="text-center">Мы работам с 8:00 до 17:00 по Московскому времени. <br /></p>
+						<p class="lead text-center"><b itemprop="telephone">+7 (920) 968-02-56</b></p>
+						<p class="text-center" itemprop="openingHours" content="Mo, Tu, We, Th, Fr 8:00-17:00">Мы работам с 8:00 до 17:00 по Московскому времени.<br /></p>
 						<h3 class="text-center"><span class="fa fa-envelope"></span> Электронная почта</h3>
-						<p class="lead text-center"><b>sales@z60x60.ru</b><p/>
+						<p class="lead text-center"><b itemprop="email">sales@z60x60.ru</b><p/>
 						<h3 class="text-center"><span class="fa fa-map-marker"></span> Адрес</h3>
-						<p class="text-center">390000 Россия, <span class="no-break">Рязанская обл.,</span> <span class="no-break">г. Рязань,</span> <span class="no-break">Ряжское шоссе,</span> <span class="no-break">д. 20</span></p>
-						<p class="text-center">Территория завода химического волокна</p>
+						<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="text-center">
+							<span itemprop="postalCode">390000</span>
+							<span itemprop="addressCountry">Россия</span>,
+							<span itemprop="addressRegion" class="no-break">Рязанская область</span>,
+							<span itemprop="addressLocality" class="no-break">г. Рязань</span>,
+							<span itemprop="streetAddress">
+								<span class="no-break">Ряжское шоссе</span>, <span class="no-break">д. 20</span>
+							</span>
+						</p>
+						<p itemprop="location" class="text-center">Территория завода химического волокна</p>
 						<h3 class="text-center">Схема проезда</h3>
 						<div class="embed-responsive embed-responsive-16by9">
 							<div class="embed-responsive-item">
@@ -163,6 +171,7 @@
 								<!--/noindex-->
 							</div>
 						</div>
+						<meta itemprop="name" content="Центр ВТО">
 					</div>
 				</div>
 			</div>
