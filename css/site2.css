@@ -140,6 +140,24 @@ main {
   width: 100%;
   text-align: center;
 }
+@media (orientation: landscape) {
+  #main-menu-sm {
+    max-height: 250px;
+    overflow: auto;
+  }
+}
+@media (orientation: landscape) and (min-width: 768px) {
+  #main-menu-sm {
+    max-height: 300px;
+    overflow: auto;
+  }
+}
+@media (orientation: landscape) and (min-width: 992px) {
+  #main-menu-sm {
+    max-height: none;
+    overflow: auto;
+  }
+}
 #photos {
   max-width: 470px;
   margin-left: auto;

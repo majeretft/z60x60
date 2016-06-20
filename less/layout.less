@@ -106,3 +106,25 @@ main {
 	width: 100%;
 	text-align: center;
 }
+
+// fix bootstrap fixed nav bar menu on orientation: landscape
+@media (orientation: landscape) {
+	#main-menu-sm {
+		max-height: 250px;
+		overflow: auto;
+	}
+}
+
+@media (orientation: landscape) and (min-width: @screen-sm-min) {
+	#main-menu-sm {
+		max-height: 300px;
+		overflow: auto;
+	}
+}
+
+@media (orientation: landscape) and (min-width: @screen-md-min) {
+	#main-menu-sm {
+		max-height: none;
+		overflow: auto;
+	}
+}
