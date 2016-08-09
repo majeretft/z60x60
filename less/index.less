@@ -7,12 +7,17 @@
 	overflow: hidden;
 	background-color: @well-background-color;
 	margin-bottom: @content-spacing;
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	z-index: 100;
 
 	img {
 		border-bottom: 1px solid #ccc;
 	}
 
-	h3 {
+	h2 {
+		font-size: 24px;
 		padding-left: 10px;
 		padding-right: 10px;
 		text-align: center;
@@ -23,46 +28,66 @@
 		padding-right: 10px;
 	}
 
-	a {
+	div.btn {
 		border-radius: 0;
 		border-left: none;
 		border-right: none;
 		border-bottom: none;
 	}
-		
-		@media (min-width: @screen-sm-min) {
-			h3 {
-				height: 52px;
-			}
 
-			p {
-				height: 60px;
-			}
+	&:hover,
+	&:visited,
+	&:focus {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	@media (min-width: @screen-sm-min) {
+		h2 {
+			height: 52px;
 		}
 
-		@media (min-width: @screen-md-min) {
-			h3 {
-				height: 78px;
-			}
-			
-			p {
-				height: 80px;
-			}
+		p {
+			height: 60px;
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		transition: all ease-in-out 0.1s;
+
+		&:hover {
+			transform: scale(1.02);
+			border-color: #2e6da4;
 		}
 
-		@media (min-width: @screen-lg-min) {
-			h3 {
-				height: 52px;
-			}
-
-			p {
-				height: 60px;
-			}
+		h2 {
+			height: 78px;
 		}
+
+		p {
+			height: 80px;
+		}
+	}
+
+	@media (min-width: @screen-lg-min) {
+		h2 {
+			height: 52px;
+		}
+
+		p {
+			height: 60px;
+		}
+	}
 }
 
 .bordered-column > .promo-item {
 	height: auto;
+
+	.title {
+		font-size: 18px;
+		margin: 10px 0;
+		line-height: 1.1;
+	}
 
 	@media(min-width: @screen-sm-min) {
 		height: 221px;
